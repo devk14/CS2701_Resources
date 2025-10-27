@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Fresh Food For All
-        </title>
-        <link rel="stylesheet" href="CS2701-Week4-Registration.css">
-    </head>
-    <body>
-        <header></header>
-        <nav>
-            <!-- ToDo: An unordered list to represent the menu, 
-                       each list item should correspond to the menu items (Home, Register, Login, Help)
-                       The css class of the menu is "navlist"
-                       Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
-            <ul class="navlist">
-            </ul>
-         </nav>
-        <main>
-            <!-- Check Week 4 Lecture to learn about HTML5 semantic elements-->
-            <aside>
-            </aside>
-            <section>
-                <form class="center" novalidate>
-                <!-- ToDo: Implement the form containing 
-                           Name - type text
-                           email- type text
-                           password - type text
-                           Terms of Service - type checkbox
-                           Register - button
-                           Learn more - link
-                           Check lecture slides and the links on the slides to learn about forms
-                           and how to create a button that would react to a click Event
-                        -->
-                    <!-- Example given for user type checkboxes-->
-                    
-                    <input type="checkbox" id="buyer" name="buyer" value="buyer">
-                    <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
-                    <input type="checkbox" id="seller" name="seller" value="seller">
-                    <label for="seller">I want to sell produce from my allotment.</label><br><br>
+  <head>
+    <title>Fresh Food For All</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="CS2701-Week4-Registration.css" />
+  </head>
+  <body>
+    <header></header>
 
-                    <br><br>
-                </form>
-                <div class="center" id="hiddenSection">
-                    <p id="hiddenParagraph"></p>
-                </div>
-            </section>
-        </main>
-    </body>
+    <nav>
+      <ul class="navlist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <aside>
+        <input class="search" type="search" placeholder="Search" />
+      </aside>
+
+      <section>
+        <form class="center" novalidate>
+          <div class="textInput">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="textInput">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="textInput">
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" required />
+          </div>
+
+          <div class="textInput">
+            <label for="password2">Re-type password:</label>
+            <input id="password2" name="password2" type="password" required />
+          </div>
+
+          <div class="textInput">
+            <input type="checkbox" id="buyer" name="buyer" value="buyer" />
+            <label for="buyer"
+              >I want to buy produce directly from allotment owners.</label
+            >
+          </div>
+
+          <div class="textInput">
+            <input type="checkbox" id="seller" name="seller" value="seller" />
+            <label for="seller">I want to sell produce from my allotment.</label>
+          </div>
+
+          <div class="textInput">
+            <input type="checkbox" id="tos" name="tos" required />
+            <label for="tos">
+              I agree to the
+              <a href="#">Terms of Use</a> and
+              <a href="#">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Register</button>
+            <a id="learnMore" href="#">Learn more</a>
+          </div>
+        </form>
+
+        <div class="center" id="hiddenSection">
+          <p id="hiddenParagraph"></p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
